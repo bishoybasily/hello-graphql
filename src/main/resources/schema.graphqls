@@ -1,0 +1,21 @@
+type Query {
+    greetings: [Greeting!]
+    greeting(id: String!): Greeting!
+}
+type Subscription {
+    stockQuotes(stockCodes:[String]) : StockPriceUpdate!
+}
+type Mutation {
+    greeting(message: String!): Greeting!
+}
+type StockPriceUpdate {
+    dateTime : String
+    stockCode : String
+    stockPrice : Float
+    stockPriceChange : Float
+}
+type Greeting {
+    id: String!
+    message: String!
+    complex: String!
+}
