@@ -10,23 +10,4 @@ graphiql:
   mapping: /graphiql
   enabled: true
 
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    password: toor
-    url: jdbc:mysql://127.0.0.1:3306/hello_graphql?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
-    hikari:
-      connection-test-query: SELECT 1
-  jpa:
-    properties:
-      hibernate:
-        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
-        dialect: org.hibernate.dialect.MySQL5Dialect
-        format_sql: false
-        show_sql: true
-        globally_quoted_ids: true
-        enable_lazy_load_no_trans: true
-        generate_statistics: false
-        hbm2ddl:
-          auto: create-drop
+

@@ -3,7 +3,6 @@ package com.gmail.bishoybasily.graphql.model.service;
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.gmail.bishoybasily.graphql.model.entity.Greeting;
 import com.gmail.bishoybasily.graphql.model.repository.GreetingRepository;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 @Service

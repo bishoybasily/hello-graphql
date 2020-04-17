@@ -3,11 +3,7 @@ package com.gmail.bishoybasily.graphql.model.service;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.gmail.bishoybasily.graphql.model.entity.Greeting;
 import com.gmail.bishoybasily.graphql.model.repository.GreetingRepository;
-import graphql.execution.batched.Batched;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Mono;
-
-import java.util.concurrent.CompletableFuture;
 
 
 @Service
