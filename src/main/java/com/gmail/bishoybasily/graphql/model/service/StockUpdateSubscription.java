@@ -5,7 +5,7 @@ import com.gmail.bishoybasily.graphql.model.entity.StockPriceUpdate;
 import org.reactivestreams.Publisher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.FluxSink;
 
@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
 
-@Service
+@Component
 class StockUpdateSubscription implements GraphQLSubscriptionResolver {
 
     private static final Logger LOG = LoggerFactory.getLogger(StockUpdateSubscription.class);
