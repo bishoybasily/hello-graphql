@@ -6,8 +6,13 @@ graphql:
     subscriptions:
       websocket:
         path: /ws/subscriptions
+    asyncModeEnabled: true
+
 graphiql:
-  mapping: /graphiql
   enabled: true
+  mapping: /graphiql
+  endpoint:
+    subscriptions: /subscriptions
+    graphql: /graphql
 
 
