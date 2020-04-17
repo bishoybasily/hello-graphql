@@ -3,9 +3,9 @@ package com.gmail.bishoybasily.graphql.model.service;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.gmail.bishoybasily.graphql.model.entity.Greeting;
 import com.gmail.bishoybasily.graphql.model.repository.GreetingRepository;
+import org.reactivestreams.Publisher;
 import org.springframework.stereotype.Service;
-
-import java.util.Collection;
+import reactor.core.publisher.Mono;
 
 
 @Service
@@ -23,8 +23,8 @@ public class GreetingQuery02 implements GraphQLQueryResolver {
 //    }
 
     //    @PreAuthorize("hasAnyAuthority('ADMINISTRATOR')")
-    public Collection<Greeting> greetings() {
-        return greetingRepository.findAll();
+    public Publisher<Iterable<Greeting>> greetings() {
+        return Mono.fromCallable(() -> greetingRepository.findAll());
     }
 
 }
