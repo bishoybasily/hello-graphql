@@ -1,6 +1,7 @@
 type Query {
     greetings: [Greeting!]
     greeting(id: String!): Greeting!
+    browse(path:String):File
 }
 type Subscription {
     stockQuotes(stockCodes:[String]) : StockPriceUpdate!
@@ -18,4 +19,10 @@ type Greeting {
     id: String!
     message: String!
     complex: String!
+}
+
+type File {
+    path:String
+    directory:Boolean
+    files:[File]
 }
